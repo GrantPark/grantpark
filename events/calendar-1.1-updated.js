@@ -597,7 +597,7 @@
 //                    }
 //                });
             })
-            .success(function() { alert("loadEventList second success"); })
+            .success(function(data) { alert("loadEventList second success: " + JSON.stringify(data)); })
             .error(function(data) { alert("loadEventList error " + JSON.stringify(data)); })
             //.complete(function() { alert("loadEventList complete"); })
             .fail(function(xhr){
