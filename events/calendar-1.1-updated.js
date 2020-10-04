@@ -316,7 +316,7 @@
             
             $("#adminMessage").append('Event List:<br><a href="' + eventListJsonLink + '">' + eventListJsonLink + '</a><br>');
 
-            $.getJSON(eventListJsonLink, function (data) {
+            $.getJSON(eventListJsonLink, function (data, status, xhr) {
 
                 var parent = document.getElementById('eventList');
                 var parentOngoing = document.getElementById('eventListOngoing');
@@ -596,6 +596,12 @@
 //                        $('#displayCount').show();
 //                    }
 //                });
+            })
+            .success(function() { alert("loadEventList second success"); })
+            .error(function(data) { alert("loadEventList error " + JSON.stringify(data)); })
+            //.complete(function() { alert("loadEventList complete"); })
+            .fail(function(xhr){
+               alert("fail xhr.responseText: " + xhr.responseText);
             });
 
             $('.showMoreEvents').on('click', null, function () {
