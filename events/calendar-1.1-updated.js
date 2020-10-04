@@ -32,6 +32,9 @@
     var val = $.extend({}, param, hash); // load param and hash into val, hash overriding param.
 
     var jsonLinkBase = '/core/event/fullcalendarfeed.aspx';
+
+    //TEMP
+    jsonLinkBase = "https://gpna.org" + jsonLinkBase;
     
     function loadCalendar(initVals) { // Might only call this from outside this .js page, so params can override show.
         $(document).ready(function () {
