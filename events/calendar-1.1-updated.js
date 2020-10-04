@@ -296,12 +296,13 @@
         
         buildJsonLink(tid, show);
         eventListJsonLink = cJsonlink.replace(/&amp;/g,"&") + '&getwhat=results';
+        alert("eventListJsonLink before: " + eventListJsonLink)
 
         // TEMP
         //eventListJsonLink = "https://gpna.org" + eventListJsonLink;
         eventListJsonLink = "https://gpna.org/core/event/fullcalendarfeed.aspx?admin=1&json=1";
 
-        //alert("eventListJsonLink: " + eventListJsonLink)
+        alert("eventListJsonLink after: " + eventListJsonLink)
         var gData;
         var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
         var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
@@ -317,6 +318,9 @@
             $("#adminMessage").append('Event List:<br><a href="' + eventListJsonLink + '">' + eventListJsonLink + '</a><br>');
 
             $.getJSON(eventListJsonLink, function (data, status, xhr) {
+
+                $("#adminMessage").append('Data:<br>' + JSON.stringify(data));
+
 
                 var parent = document.getElementById('eventList');
                 var parentOngoing = document.getElementById('eventListOngoing');
@@ -576,14 +580,9 @@
                     parentOngoing.appendChild(child);
                 });
 
-               alert("loadEventList initial success: " + JSON.stringify(data)); 
+               
 
-            })
-            .success(function(data) { 
-
-                alert("loadEventList second success: " + JSON.stringify(data)); 
-
-                $.each(data.count, function (i, id) {
+               $.each(data.count, function (i, id) {
                    // Display admin messages from JSON file.
                    if (id.id) {
                        child = document.createElement("div");
@@ -603,6 +602,13 @@
                        $('#displayCount').show();
                    }
                });
+
+            })
+            .success(function(data) { 
+
+                //alert("loadEventList second success: " + JSON.stringify(data)); 
+
+                
 
             })
             .error(function(data) { alert("loadEventList error " + JSON.stringify(data)); })
