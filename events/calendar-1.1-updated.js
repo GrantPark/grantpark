@@ -34,7 +34,8 @@
     var jsonLinkBase = '/core/event/fullcalendarfeed.aspx';
 
     //TEMP
-    jsonLinkBase = "https://gpna.org" + jsonLinkBase;
+    //jsonLinkBase = "https://gpna.org" + jsonLinkBase; // Too much junk - tags and invalid dates
+    jsonLinkBase = "https://gpna.org/core/event/fullcalendarfeed.aspx?json=1"
     
     function loadCalendar(initVals) { // Might only call this from outside this .js page, so params can override show.
         $(document).ready(function () {
