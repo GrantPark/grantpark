@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="img/logo/favicon.png" />
+
+<title>Events</title>
+<link type="text/css" href="https://neighborhood.org/localsite/css/base.css" rel="stylesheet" />
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/d3.v5.min.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/jquery/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/localsite.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/showdown.min.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/navigation.js"></script>
+<script>
+	param.titleArray = ["local","site"]
+	//param.footer = "/localsite/footer.html"
+</script>
+<style>
+	.upperIcons {display: none;}
+</style>
+
+
+<!-- limit these to activities -->
+
+<script type='text/javascript' src='calendar-1.1-updated.js'></script>
+<!-- to do: move this into calendar.css -->
+<link rel='stylesheet' type='text/css' href="https://explore.gastateparks.org/core/event/fullcalendar/fullcalendar.css" />
+<link type="text/css" href="https://explore.gastateparks.org/core/elements/styles/themes/jqueryui/1.12.1/base/jquery-ui.min.css" rel="stylesheet" />
+<link rel='stylesheet' type='text/css' href="https://explore.gastateparks.org/jquery/calendar/css/calendar.css" />
+<script type="text/javascript" src="https://explore.gastateparks.org/core/elements/styles/themes/jqueryui/1.12.1/base/jquery-ui.min.js"></script>
+<script type='text/javascript' src='https://explore.gastateparks.org/core/event/fullcalendar/fullcalendar.min.js'></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var initVals = {
+	        'show': 'list',
+	        'tid': '<%=tid%>',
+	        occurrenceShow: 3
+	    };
+
+		loadCalendar(initVals);
+
+		 $('.showMoreEvents').click(function () {
+		 	$('#eventListOngoing').insertAfter($('#leftTop'));
+            $('#eventList').insertAfter($('#leftTop'));
+            $('.titlearea').insertAfter($('#leftTop'));
+        });
+	});
+</script>
+
+</head>
+
+<body>
+
+<!-- Event List Embed -->
+<div id="eventList"></div>
+<div id="eventListOngoing"></div>
+<div style="clear:both"></div>
+
+<div id="displayCount" style='float:left'></div>
+
+<div style="clear:both"></div>
+<!-- /Event List Embed -->
+
+</body>
+</html>
+
+
