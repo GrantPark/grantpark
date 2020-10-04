@@ -576,26 +576,26 @@
                     parentOngoing.appendChild(child);
                 });
 
-//                $.each(data.count, function (i, id) {
-//                    // Display admin messages from JSON file.
-//                    if (id.id) {
-//                        child = document.createElement("div");
-//                        var countStr = '';
+               $.each(data.count, function (i, id) {
+                   // Display admin messages from JSON file.
+                   if (id.id) {
+                       child = document.createElement("div");
+                       var countStr = '';
 
-//                        // Instances are less than monthly because ongoing events are not counted in instances.
-//                        // Ongoing events that start outside of month are included in right side, so inflates amount
-//                        if (ongoingEventCount > 0) {
-//                            countStr += (ongoingEventCount + occurrenceCount) + ' events';
-//                            countStr += ' (' + occurrenceCount + ' plus ' + ongoingEventCount + ' ongoing)';
-//                        } else {
-//                            countStr += occurrenceCount + ' events.';
-//                        }
-//                        child.innerHTML = '<div >' + countStr + '</div>';
+                       // Instances are less than monthly because ongoing events are not counted in instances.
+                       // Ongoing events that start outside of month are included in right side, so inflates amount
+                       if (ongoingEventCount > 0) {
+                           countStr += (ongoingEventCount + occurrenceCount) + ' events';
+                           countStr += ' (' + occurrenceCount + ' plus ' + ongoingEventCount + ' ongoing)';
+                       } else {
+                           countStr += occurrenceCount + ' events.';
+                       }
+                       child.innerHTML = '<div >' + countStr + '</div>';
 
-//                        document.getElementById('displayCount').appendChild(child);
-//                        $('#displayCount').show();
-//                    }
-//                });
+                       document.getElementById('displayCount').appendChild(child);
+                       $('#displayCount').show();
+                   }
+               });
             })
             .success(function(data) { alert("loadEventList second success: " + JSON.stringify(data)); })
             .error(function(data) { alert("loadEventList error " + JSON.stringify(data)); })
