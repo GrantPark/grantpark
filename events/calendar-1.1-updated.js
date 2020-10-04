@@ -36,6 +36,7 @@
     //TEMP
     //jsonLinkBase = "https://gpna.org" + jsonLinkBase; // Too much junk - tags and invalid dates
     jsonLinkBase = "https://gpna.org/core/event/fullcalendarfeed.aspx?json=1"
+    alert("jsonLinkBase: " + jsonLinkBase)
     
     function loadCalendar(initVals) { // Might only call this from outside this .js page, so params can override show.
         $(document).ready(function () {
@@ -296,7 +297,10 @@
         buildJsonLink(tid, show);
         eventListJsonLink = cJsonlink.replace(/&amp;/g,"&") + '&getwhat=results';
 
-        eventListJsonLink = "https://gpna.org" + eventListJsonLink;
+        // TEMP
+        //eventListJsonLink = "https://gpna.org" + eventListJsonLink;
+        eventListJsonLink = "https://gpna.org/core/event/fullcalendarfeed.aspx?admin=1&json=1";
+
         alert("eventListJsonLink: " + eventListJsonLink)
         var gData;
         var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
