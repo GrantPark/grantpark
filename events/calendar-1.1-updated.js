@@ -576,7 +576,14 @@
                     parentOngoing.appendChild(child);
                 });
 
-               $.each(data.count, function (i, id) {
+               alert("loadEventList initial success: " + JSON.stringify(data)); 
+
+            })
+            .success(function(data) { 
+
+                alert("loadEventList second success: " + JSON.stringify(data)); 
+
+                $.each(data.count, function (i, id) {
                    // Display admin messages from JSON file.
                    if (id.id) {
                        child = document.createElement("div");
@@ -596,8 +603,8 @@
                        $('#displayCount').show();
                    }
                });
+
             })
-            .success(function(data) { alert("loadEventList second success: " + JSON.stringify(data)); })
             .error(function(data) { alert("loadEventList error " + JSON.stringify(data)); })
             //.complete(function() { alert("loadEventList complete"); })
             .fail(function(xhr){
