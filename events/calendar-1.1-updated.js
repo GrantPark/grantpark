@@ -622,15 +622,15 @@
                 
 
             })
-            .error(function(data) { alert("loadEventList error " + JSON.stringify(data)); })
+            .error(function(data) { 
+                $("#eventList").append("<b>Event list API may not be available from this domain</b><br>" + JSON.stringify(data));
+            })
             //.complete(function() { alert("loadEventList complete"); })
             .fail(function(xhr){
-               alert("fail xhr.responseText: " + xhr.responseText);
+               //alert("fail xhr.responseText: " + xhr.responseText);
             });
 
             $(document).on("click",".showMoreEvents",function() {
-            //$('.showMoreEvents').on('click', null, function () {
-                alert('.showMoreEvents')
                 $('.showMoreEvents').hide();
                 $('.hiddenDateRow').show();
                 $('.hiddenEventRow').show();
