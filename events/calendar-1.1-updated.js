@@ -340,7 +340,7 @@
                 });
 
                 $.each(data.results, function (i, id) {
-                    console.log("data.results id.start " + id.start);
+                    console.log("data.results id.start: " + id.start);
 
                     var startDate = new Date(id.start);
                     var endDate = new Date(id.end);
