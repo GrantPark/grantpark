@@ -386,7 +386,7 @@
 
                 //alert('before');
                 // Then sort dataModified by start date.
-                dataModified.sort(sortMyObjects);
+                dataModified.sort(sortByDisplayTime);
                 //alert('after');
                 var title = '';
                 var lineBreak = '';
@@ -423,7 +423,8 @@
                     //numberDays += '<br />displayDate ' + displayDate + '<br />';
                     //numberDays += 'startDate ' + startDate + '<br />';
 
-                    if (displayDate >= fromDate) {
+                    // REACTIVATE
+                    //if (displayDate >= fromDate) {
                         occurrenceCount++;
                         if (displayDateString != previousDateString) {
 
@@ -508,7 +509,7 @@
                             child.innerHTML = '<div class="eventRow hiddenEventRow">' + thumbStr + floatRight + '<a class="largerTitle" href="' + id.url + '">' + title + numberDays + '</a>' + lineBreak + timeStr + locationStr + summaryStr + '</div>';
                         }
                         parent.appendChild(child);
-                    }
+                    //}
 
                 });
                 
@@ -689,7 +690,7 @@
         return Math.ceil(diff / oneDay);
     }
 
-    function sortMyObjects(a, b) {
+    function sortByDisplayTime(a, b) {
         return a.displayTime - b.displayTime;
     }
 
