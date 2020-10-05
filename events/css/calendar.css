@@ -176,75 +176,78 @@
     margin-bottom: 4px;
     font-family: calibri, helvetica;
     font-size: 10.5pt;
-    color: #4F4F4F;
+    color: #e69c37;
     border-bottom: 1px solid #ddd;
     line-height: 1.2em;
     overflow: hidden;
     min-width: 280px;
 }
-    .eventRow a {
-        colorX:#4B6Aaa;
-    }
-    .hiddenEventRow {
-        display: none;
-    }
-    .todoRow {
-	    padding: 8px;
-	    background: #fcc;
-	    -moz-border-radius: 8px;
-	    -webkit-border-radius: 8px;
-	    margin-bottom: 4px;
-    }
-    .moreInfo {
-        cursor: pointer;
-        color: #4F4F4F;
-        font-size: 0.8em;
-        font-weight: bold;
-    }
-    
-    .moreInfo:hover
-    {
-    	text-decoration: underline;
-    }
-    
-    .hideLink
-    {
-	    cursor:pointer;
-	    color:#77c;
-	    font-size:0.8em;
-	    display:none;
-    }
-    .detailsText
-    {
-    	margin-top:3px;
-	    color:#777;
-	    font-sizeX:0.95em;
-	    display:none;
-    }
-    .patternText
-    {
-    	float:right;
-    	color:#999;
-    	font-size:.9em;
-    }
-    .largerTitle
-    {
-    	font-size:11.5pt;
-    	font-weight: bold;
-    	line-height:1.2em;
-    	color: #5a5acc;
-    }
-    #creditsDiv
-    {
-    	margin-top: 2px;
-    	border: 2px solid #bbb;
-    	padding: 0px 7px 0px;
-    	-moz-border-radius: 8px;
-	    -webkit-border-radius: 8px;
-	    font-size: .85em;
-	    color: #4B6A83;
-    }
-    .contentArea { max-width: 2000px; background-color: #fff }
+.eventRow a {
+    colorX:#4B6Aaa;
+}
+.hiddenEventRow {
+    display: none;
+}
+.todoRow {
+    padding: 8px;
+    background: #fcc;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    margin-bottom: 4px;
+}
+.moreInfo {
+    cursor: pointer;
+    color: #4F4F4F;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.moreInfo:hover
+{
+	text-decoration: underline;
+}
+
+.hideLink
+{
+    cursor:pointer;
+    color:#77c;
+    font-size:0.8em;
+    display:none;
+}
+.detailsText
+{
+	margin-top:3px;
+    color:#777;
+    font-sizeX:0.95em;
+    display:none;
+}
+.patternText
+{
+	float:right;
+	color:#999;
+	font-size:.9em;
+}
+.largerTitle
+{
+	font-size:11.5pt;
+	font-weight: bold;
+	line-height:1.2em;
+	color: #5a5acc;
+}
+#creditsDiv
+{
+	margin-top: 2px;
+	border: 2px solid #bbb;
+	padding: 0px 7px 0px;
+	-moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    font-size: .85em;
+    color: #4B6A83;
+}
+.contentArea { 
+    max-width: 2000px;
+    background-color: #fff;
+}
 
 .showMoreEvents {
     background-color: #bbb;
@@ -265,14 +268,14 @@
     min-height: 18px;
     margin-bottom: 14px;
 }
-    .showMoreEvents:hover {
-        background-color: #ff8600;
-        border: solid 1px #ff8600;
-        color: #1C1C1C;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    /* not working */
-    #ui-datepicker-div {
-        z-index: 10; // To overlap full calendar events
-    }
+.showMoreEvents:hover {
+    background-color: #ff8600;
+    border: solid 1px #ff8600;
+    color: #1C1C1C;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* not working */
+#ui-datepicker-div {
+    z-index: 10; // To overlap full calendar events
+}

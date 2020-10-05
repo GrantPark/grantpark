@@ -65,8 +65,11 @@
         $('#creditsDiv').hide(); // To show later when link added and title updated.
 
         populateMonthDD();
-        $("#from").datepicker();
-        $("#to").datepicker();
+
+        // Requires /core/elements/styles/themes/jqueryui/1.12.1/base/jquery-ui.min.js
+        //$("#from").datepicker();
+        //$("#to").datepicker();
+
         if(hash["siteid"])
         {
             $("#siteid").val(hash["siteid"]);
@@ -151,11 +154,16 @@
             $('#to').datepicker('setDate', endDateString);
         } else {
             // hash["sd"]
+
+            // Requires /core/elements/styles/themes/jqueryui/1.12.1/base/jquery-ui.min.js
+            /*
             if (hash["sd"]) { // To do: Add date validation
                 $('#from').datepicker('setDate', hash["sd"]);
             } else {
                 $('#from').datepicker('setDate', new Date());
             }
+            */
+
             var sd = $("#from").val();
             var endDate = new Date();
 
@@ -169,7 +177,9 @@
             }
             //alert(endDateString);
             //$('#to').datepicker('setDate', '+2m'); // +3m 2d
-            $('#to').datepicker('setDate', endDateString);
+
+            // Requires /core/elements/styles/themes/jqueryui/1.12.1/base/jquery-ui.min.js
+            //$('#to').datepicker('setDate', endDateString);
         }
 
     }
@@ -705,6 +715,9 @@
     }
 
     // http://jqueryui.com/demos/datepicker/#date-range
+    // Requires /core/elements/styles/themes/jqueryui/1.12.1/base/jquery-ui.min.js
+    
+    /*
     $(function () {
         var dates = $("#from, #to").datepicker({
             defaultDate: "+1w",
@@ -740,6 +753,7 @@
             $('select.ui-datepicker-year').attr('title', 'Year');
         }, 250);
     }
+    */
 
     // Usage Rules
     // To use or modify this script in a public website, you are required to provide  
