@@ -62,18 +62,63 @@
 	    <div class="pageColumn">
 	      <div class="pageColumnInside">
 	          <div id="newsDiv"></div>
+	          <div id="agendasDiv"></div>
 	      </div>
 	    </div>
-	    <div class="pageColumn">
+	    <div style="overflow:auto">
 	      <div class="pageColumnInside">
 	        <div id="eventsDiv"></div>
+
+	        <!-- EVENT LIST EMBED -->
+
+				<script type='text/javascript' src='events/calendar-1.1-updated.js'></script>
+
+				<!-- Remove some of these -->
+				<!-- to do: move this into calendar.css -->
+				<link rel='stylesheet' type='text/css' href="https://explore.gastateparks.org/core/event/fullcalendar/fullcalendar.css" />
+				<link type="text/css" href="https://explore.gastateparks.org/core/elements/styles/themes/jqueryui/1.12.1/base/jquery-ui.min.css" rel="stylesheet" />
+				<link rel='stylesheet' type='text/css' href="https://explore.gastateparks.org/jquery/calendar/css/calendar.css" />
+				<script type="text/javascript" src="https://explore.gastateparks.org/core/elements/styles/themes/jqueryui/1.12.1/base/jquery-ui.min.js"></script>
+				<script type='text/javascript' src='https://explore.gastateparks.org/core/event/fullcalendar/fullcalendar.min.js'></script>
+
+				<script type="text/javascript">
+				    $(document).ready(function(){
+				        var initVals = {
+					        'show': 'list',
+					        //'tid': '',
+					        occurrenceShow: 4
+					    };
+
+						loadCalendar(initVals);
+
+						 $('.showMoreEvents').click(function () {
+						 	$('#eventListOngoing').insertAfter($('#leftTop'));
+				            $('#eventList').insertAfter($('#leftTop'));
+				            $('.titlearea').insertAfter($('#leftTop'));
+				        });
+					});
+				</script>
+
+
+				<div id="eventList"></div>
+				<div id="eventListOngoing"></div>
+				<div style="clear:both"></div>
+
+				<div id="displayCount" style='float:left'></div>
+
+				<div style="clear:both"></div>
+
+				<div id="adminMessage"></div>
+
+				<!--
+				newsLevelCB
+				-->
+
+			<!-- /EVENT LIST EMBED -->
+
 	      </div>
 	    </div>
-	    <div class="pageColumn">
-	      <div class="pageColumnInside">
-	        <div id="agendasDiv"></div>
-	      </div>
-	    </div>
+
 	</div>
 
 	<div style="clear:both"></div>
