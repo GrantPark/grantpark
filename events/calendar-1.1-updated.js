@@ -601,7 +601,8 @@ function loadEventList(initVals) {
                    child.innerHTML = '<div >' + countStr + '</div>';
 
                    document.getElementById('displayCount').appendChild(child);
-                   $('#displayCount').show();
+                   //$('#displayCount').show();
+                   console.log(countStr);
                }
            });
 
