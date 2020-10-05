@@ -300,12 +300,12 @@
 
         // TEMP
         //eventListJsonLink = "https://gpna.org" + eventListJsonLink;
-        eventListJsonLink = "https://gpna.org/core/event/fullcalendarfeed.aspx?admin=1&json=1";
+        eventListJsonLink = "https://gpna.org/core/event/fullcalendarfeed.aspx?admin=1&json=1&getwhat=results";
 
         alert("eventListJsonLink after: " + eventListJsonLink)
         var gData;
-        var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
-        var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         var previousDateString;
 
         //if (param["show"] == "list") { // would need to use show == "list" if uncommented.
@@ -319,13 +319,13 @@
 
             $.getJSON(eventListJsonLink, function (data, status, xhr) {
 
-                $("#adminMessage").append('Data:<br>' + JSON.stringify(data));
+                $("#adminMessage").append('Event List:<br>' + JSON.stringify(data));
 
 
                 var parent = document.getElementById('eventList');
                 var parentOngoing = document.getElementById('eventListOngoing');
-                var dataModified = new Array();
-                var dataOngoing = new Array();
+                var dataModified = [];
+                var dataOngoing = [];
 
                 $.each(data.message, function (i, id) {
                     // Display admin messages from JSON file.
@@ -807,7 +807,7 @@
             timeFormat: 'h(:mm)tt',
             viewDisplay: function (view) {
                 //alert('The new title of the view is ' + view.start);
-                var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+                var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
         
                 var startDate = new Date(view.start);
                 $('#calendarTitle').html(months[startDate.getMonth()] + ' ' + fourdigits(startDate.getYear()));
@@ -965,7 +965,7 @@
         var monthNumber = startDate.getMonth() - 1;
         if (monthNumber == 12) monthNumber = 0;
         var year = fourdigits(startDate.getYear());
-        var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
         var optionsValues = '<select id="MonthDD" title="Select Month" onchange="updateDateRange()">';
         for (var i = 0; i <= numMonths; i++) {
