@@ -521,6 +521,7 @@ function loadEventList(initVals) {
             } else {
                 child.innerHTML = '<!-- No events found matching search -->';
             }
+            child.innerHTML += '<div class="showCalendar hiddenDateRow">VIEW CALENDAR</div>';
             parent.appendChild(child);
             
 
@@ -625,12 +626,15 @@ function loadEventList(initVals) {
             $('.hiddenDateRow').show();
             $('.hiddenEventRow').show();
         });
-        $('.detailsLink').on('click', null, function () {
+        $(document).on("click",".showCalendar",function() {
+            window.location="/calendar";
+        });
+        $(document).on('click', '.detailsLink', function () {
             // Display nested, then hide self
             $(this).parent('div').children('span').attr('style', 'display:inline');
             $(this).attr('style', 'display:none');
         });
-        $('.hideLink').on('click', null, function () {
+        $(document).on('click', '.hideLink', function () {
             // Hide nested, then display detailsLink
             $(this).parent('div').children('span').attr('style', 'display:none');
             

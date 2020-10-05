@@ -63,35 +63,30 @@
     float:left;
     min-width:60px;
 }
-.calendarTabs ul li a:hover
-{
+.calendarTabs ul li a:hover {
     background-color: #fff;
 }
-.calendarTabs ul li a .selected
-{
+.calendarTabs ul li a .selected {
 	background-color: #fff;
     border-bottom-color: red;
 }
 
-.calendarTabs ul li a .active
-{
+.calendarTabs ul li a .active {
 	background-color: #fff; /* not working */
 }
 
 .rollover:hover {
     cursor: pointer;
 }
-.thumbnail 
-{
-	margin-left:4px; max-height:68px
+.thumbnail {
+	margin-left:4px;
+    max-height:32px
 }
 
-.fc, .fc .fc-header, .fc .fc-content
-{
+.fc, .fc .fc-header, .fc .fc-content {
     font-size: 1.05em;
 }
-.fc-header-title 
-{
+.fc-header-title {
    font-weight: normal; 
    line-height: 1.3em;
    font-family: trebuchet ms, futura bk bt, Century Gothic, ITC Officina Sans Book, Helvetica, Arial, Verdana, Sans-Serif; 
@@ -100,13 +95,11 @@
    color: #656544;
 }
 
-.fc-event 
-{
+.fc-event {
 	color: #ccc;
 	background-color: #ccc;
 }
-.fc-event-hori 
-{
+.fc-event-hori {
 	color: #ccc;
 	background-color: #ccc;
 }
@@ -139,20 +132,15 @@
     color: #4F4FC1;
 }
 
-.fc-event a
-{
+.fc-event a {
 	padding-leftXX:3px;
 }
-.fc-event a:hover
-{
+.fc-event a:hover {
     background-color: #d4d4fe; /* dusty blue #9999dc; */
     background-color: #f0e9cb;
     border-color1: #9999dc;
     color1: #fff;
 }
-
-#filters { display1: none; }
-
 .dateRow {
     color: #333;
     font-size: 14pt;
@@ -165,9 +153,9 @@
     line-height: 1em;
     border-top: 1px solid #eee;
 }
-    .hiddenDateRow {
-        display: none;
-    }
+.hiddenDateRow {
+    display: none;
+}
 .eventRow {
     padding: 8px;
     background: #f4f4f4;
@@ -245,7 +233,7 @@
     background-color: #fff;
 }
 
-.showMoreEvents {
+.showMoreEvents, .showCalendar {
     background-color: #bbb;
     border: 1px solid #bbb;
     color: #2E2E2E;
@@ -264,7 +252,7 @@
     min-height: 18px;
     margin-bottom: 14px;
 }
-.showMoreEvents:hover {
+.showMoreEvents:hover, .showCalendar:hover {
     background-color: #ff8600;
     border: solid 1px #ff8600;
     color: #1C1C1C;
