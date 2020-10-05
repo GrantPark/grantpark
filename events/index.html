@@ -24,11 +24,15 @@
 <style>
 	.upperIcons {display: none;}
 </style>
+</head>
 
+<body>
 
-<!-- limit these to activities -->
+<!-- EVENT LIST EMBED -->
 
 <script type='text/javascript' src='calendar-1.1-updated.js'></script>
+
+<!-- Remove some of these -->
 <!-- to do: move this into calendar.css -->
 <link rel='stylesheet' type='text/css' href="https://explore.gastateparks.org/core/event/fullcalendar/fullcalendar.css" />
 <link type="text/css" href="https://explore.gastateparks.org/core/elements/styles/themes/jqueryui/1.12.1/base/jquery-ui.min.css" rel="stylesheet" />
@@ -40,8 +44,8 @@
     $(document).ready(function(){
         var initVals = {
 	        'show': 'list',
-	        'tid': '<%=tid%>',
-	        occurrenceShow: 3
+	        //'tid': '',
+	        occurrenceShow: 4
 	    };
 
 		loadCalendar(initVals);
@@ -54,11 +58,7 @@
 	});
 </script>
 
-</head>
 
-<body>
-
-<!-- Event List Embed -->
 <div id="eventList"></div>
 <div id="eventListOngoing"></div>
 <div style="clear:both"></div>
@@ -73,7 +73,7 @@
 newsLevelCB
 -->
 
-<!-- /Event List Embed -->
+<!-- /EVENT LIST EMBED -->
 
 </body>
 </html>

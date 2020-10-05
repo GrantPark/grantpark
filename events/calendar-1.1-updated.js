@@ -296,13 +296,13 @@
         
         buildJsonLink(tid, show);
         eventListJsonLink = cJsonlink.replace(/&amp;/g,"&") + '&getwhat=results';
-        alert("eventListJsonLink before: " + eventListJsonLink)
+        console.log("eventListJsonLink before: " + eventListJsonLink)
 
         // TEMP
         //eventListJsonLink = "https://gpna.org" + eventListJsonLink;
         eventListJsonLink = "https://gpna.org/core/event/fullcalendarfeed.aspx?admin=1&json=1&getwhat=results";
 
-        alert("eventListJsonLink after: " + eventListJsonLink)
+        console.log("eventListJsonLink after: " + eventListJsonLink)
         var gData;
         var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -315,11 +315,11 @@
             $('#eventList').show();
             $('#loading').show();
             
-            $("#adminMessage").append('Event List:<br><a href="' + eventListJsonLink + '">' + eventListJsonLink + '</a><br>');
+            //$("#adminMessage").append('Event List:<br><a href="' + eventListJsonLink + '">' + eventListJsonLink + '</a><br>');
 
             $.getJSON(eventListJsonLink, function (data, status, xhr) {
 
-                $("#adminMessage").append('Event List:<br>' + JSON.stringify(data));
+                //$("#adminMessage").append('Event List:<br>' + JSON.stringify(data));
 
 
                 var parent = document.getElementById('eventList');
@@ -515,7 +515,7 @@
                 
                 child = document.createElement("div");
                 if (occurrenceCount > occurrenceShow) {
-                    child.innerHTML = '<div class="showMoreEvents">SHOW MORE EVENTS</div>';
+                    child.innerHTML = '<div class="showMoreEvents">MORE EVENTS</div>';
                 } else if (occurrenceCount > 0) {
                     child.innerHTML = '<div style="margin-bottom:10px"></div>';
                 } else {
@@ -619,6 +619,7 @@
             });
 
             $('.showMoreEvents').on('click', null, function () {
+                alert('.showMoreEvents')
                 $('.showMoreEvents').hide();
                 $('.hiddenDateRow').show();
                 $('.hiddenEventRow').show();
