@@ -628,7 +628,8 @@
                alert("fail xhr.responseText: " + xhr.responseText);
             });
 
-            $('.showMoreEvents').on('click', null, function () {
+            $(document).on("click",".showMoreEvents",function() {
+            //$('.showMoreEvents').on('click', null, function () {
                 alert('.showMoreEvents')
                 $('.showMoreEvents').hide();
                 $('.hiddenDateRow').show();
