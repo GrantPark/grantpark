@@ -6,5 +6,3 @@ Grant Park is a historic neighborhood in Atlanta, Georgia. Craftsmen built many 
 
 
 Please fork and contribute to our GitHub repos.  Local dev by [Loren and Don at DreamStudio](https://DreamStudio.com) with content maintenance by Stephanie Warner and a slew of busy bees!  
-
-Logo font: [Rumble Brave Vintage](https://www.myfonts.com/fonts/alit-design/rumble-brave-vintage-fonts/regular/)  
