@@ -3,8 +3,8 @@
 <div style="float:left">
 
 <!--Anne Architecture (May 1, 2020)-->
-<a href="https://annearchitecture.com/" target="_blank" >
-<img src="https://annearchitecture.com/wp-content/uploads/2017/07/anne-architecture-logo.png" style="width:180px">
+<a href="http://annearchitecture.com/" target="_blank" >
+<img src="http://annearchitecture.com/wp-content/uploads/2017/07/anne-architecture-logo.png" style="width:180px">
 </a>
 
 </div>
