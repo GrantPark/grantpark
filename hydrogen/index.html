@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+<title>Grant Park Neighborhood Association, Atlanta, Georgia</title>
+<link type="text/css" href="https://neighborhood.org/localsite/css/base.css" rel="stylesheet" />
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/d3.v5.min.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/jquery/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/localsite.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/showdown.min.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/navigation.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+  crossorigin=""></script>
+
+
+<script>
+	param.titleArray = ["Grant Park"," Neighborhood Association"]
+	param.header = "../header.html"
+	//param.header = "/community/header.html"
+	param.headerLogo = "<img src='../img/logo/gpna-rect.png' style='width:60px; margin-right:10px'>";
+	param.headerFile = "../header.html"
+	//param.footer = "https://neighborhood.org/localsite/footer.html"
+</script>
+<style>
+	.upperIconsX { display: none; }
+	.markdownEye { display: none; }
+	#logoholderX { background-image: none !important; }
+	#headerSiteTitle { font-size: 16px !important; }
+	.pageColumnTitleXX { position:absolute; bottom:0px; background-color: rgba(255, 255, 255, 0.7); margin-bottom:0px;}
+	h2 { font-weight: 600; }
+</style>
+</head>
+
+<body>
+<div class="hideMobileX" style="background:#fff; min-heightX:150px; width:100%">
+	
+	<div class="herocenter hideMobile" style="position: absolute; z-index:2;">
+		<div style="border:0px solid #fff; display: inline-block;padding:20px; margin-top:-140px; background-color: rgba(255,255,255,0.7)">
+	  		<img src="../img/logo/gpna-rect.png" style="width:100%;max-width:250px; opacity:.95;" />
+	  	</div>
+	  </div>
+
+	<div class="lazy bgimg" data-src="../img/hero/2018/flower-bed.jpg" style="opacity:.85">
+		<img src="../img/hero/2018/flower-bed.jpg" style="opacity:0;width:100%">
+	</div>
+</div>
+
+<!--
+<div class="showMobile" style="text-align: center">
+	<img src="../img/logo/gpna-rect.png"  style="width:250px; opacity:.95; margin-top:30px; margin-left:30px" />
+</div>
+-->
+
+<div class="content contentpadding">
+
+	<h1>Green Hydrogen</h1>
+	<a href="https://www.rechargenews.com/transition/world-s-first-carbon-negative-hydrogen-project-gets-green-light/2-1-850916">World’s first carbon-negative hydrogen project gets green light</a><br>
+	Hazer's commercial pilot in Western Australia will convert biogas into hydrogen and graphite, a solid form of carbon.<br><br>
+
+	Is there an opportunity to add a hydrogen facility to our local waste stream?<br><br>
+
+	<div id="mapid1"></div><br>
+  <style>
+  #mapid1 { height: 380px; }
+  </style>
+  <script>
+    var mymap = L.map('mapid1').setView([33.7017, -84.3323], 13);
+    // Using mapbox.satellite since mapbox.streets stopping working.
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.satellite',
+        accessToken: 'pk.eyJ1IjoiZGF0YXBvcnRhbCIsImEiOiJjam1tOXhpeGUwZ3IyM3BtbGIwbWV1NjIxIn0.K07Nah9ZjewCR0iV4pYw_Q'
+    }).addTo(mymap);
+    mymap.scrollWheelZoom.disable();
+    var marker = L.marker([33.7017, -84.3323], { title: "Intrenchment Creek WRC" }).addTo(mymap);
+    var marker = L.marker([33.6835, -84.3629], { title: "South River WRC" }).addTo(mymap);
+  </script>
+
+Intrenchment Creek Water Reclaimation Center (WRC)
+<a href="https://www.google.com/maps/place/1510+Key+Rd+SE,+Atlanta,+GA+30316/@33.6976202,-84.3448796,3187m/data=!3m1!1e3!4m5!3m4!1s0x88f501a3a059efe3:0xf0fd2684fb33df98!8m2!3d33.7017074!4d-84.3323749">1510 Key Rd SE</a>, Atlanta, GA 30316, USA - <a href="http://wikimapia.org/19639820/Intrenchment-Creek-Water-Reclaimation-Center">About</a>
+<br><br><br>
+
+
+	<div style="clear:both"></div>
+
+
+  <div id="mapid2"></div><br>
+  <style>
+  #mapid2 { height: 380px; }
+  </style>
+  <script>
+    var mymap = L.map('mapid2').setView([33.6835, -84.3629], 15);
+    // Using mapbox.satellite since mapbox.streets stopping working.
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.satellite',
+        accessToken: 'pk.eyJ1IjoiZGF0YXBvcnRhbCIsImEiOiJjam1tOXhpeGUwZ3IyM3BtbGIwbWV1NjIxIn0.K07Nah9ZjewCR0iV4pYw_Q'
+    }).addTo(mymap);
+    mymap.scrollWheelZoom.disable();
+    var marker = L.marker([33.6835, -84.3629], { title: "My marker" }).addTo(mymap);
+  </script>
+
+
+  South River WRC - <a href="https://www.google.com/maps/place/2640+Jonesboro+Rd+SE,+Atlanta,+GA+30315/@33.6832026,-84.3638441,785m/data=!3m1!1e3!4m5!3m4!1s0x88f5021a387c5d21:0xf84311b51f86e2d6!8m2!3d33.683588!4d-84.3629172">2640 Jonesboro Rd SE</a>, Atlanta, GA 30315
+
+
+</div>
+<div style="clear:both"></div>
+
+
+
+
+
+<!-- traffic map -->
+<!-- https://developers.google.com/maps/documentation/javascript/examples/layer-traffic#all -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYA3xs8qzirlMrtOYf5v7hEEq32dN79G4&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        height: 500px;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      @media only screen and ( min-width: 980px ) {
+		.gm-style-pbc {
+		opacity: 0 !important;
+		}
+	  }
+    </style>
+    <script>
+      //"use strict";
+
+      function initMap() {
+        const myLatLng = { lat: 33.7372, lng: -84.3682 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14,
+          center: {
+            lat: 33.7372,
+            lng: -84.3682
+          },
+          options: {
+		    gestureHandling: 'cooperative'
+		  }
+        });
+        const trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+
+        new google.maps.Marker({
+          position: myLatLng,
+          map,
+          title: "Hello World!",
+        });
+
+      }
+    </script>
+    <div id="map"></div>
+<!-- /traffic map -->
+
+<div id="footer" style="display:none"></div>
+
+<div class="content contentpadding">
+  <div style="float:left">
+    <a href="https://github.com/GrantPark/grantpark">Post your input as a GitHub issue</a>
+  </div>
+  <div style="float:right">
+	<a href="https://github.com/GrantPark/grantpark"><img src="../img/logo/github.png" style="height:32px; margin: 0px 8px 2px 1.5px"></a>
+  </div>
+</div>
+
+
+</body>
+</html>
