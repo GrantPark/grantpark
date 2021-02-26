@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html;">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+
+<title>Grant Park - Boulevard Crossing Concept</title>
+<link type="text/css" href="https://neighborhood.org/localsite/css/base.css" rel="stylesheet" />
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/d3.v5.min.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/jquery/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/localsite.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/showdown.min.js"></script>
+<script type="text/javascript" src="https://neighborhood.org/localsite/js/navigation.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+  integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+  crossorigin=""></script>
+
+
+<script>
+	param.titleArray = ["Grant Park"," Neighborhood Association"]
+	param.header = "../../header.html"
+	//param.header = "/community/header.html"
+	param.headerLogo = "<img src='../../img/logo/gpna-rect.png' style='width:60px; margin-right:10px'>";
+	param.headerFile = "../../header.html"
+	//param.footer = "https://neighborhood.org/localsite/footer.html"
+</script>
+<style>
+	.upperIconsX { display: none; }
+	.markdownEye { display: none; }
+	#logoholderX { background-image: none !important; }
+	#headerSiteTitle { font-size: 16px !important; }
+	.pageColumnTitleXX { position:absolute; bottom:0px; background-color: rgba(255, 255, 255, 0.7); margin-bottom:0px;}
+	h2 { font-weight: 600; }
+</style>
+</head>
+
+<body>
+<div class="hideMobileX" style="background:#fff; min-heightX:150px; width:100%">
+	
+	<div class="herocenter hideMobile" style="position: absolute; z-index:2;">
+		
+	  </div>
+
+
+</div>
+
+<!--
+<div class="showMobile" style="text-align: center">
+	<img src="../img/logo/gpna-rect.png"  style="width:250px; opacity:.95; margin-top:30px; margin-left:30px" />
+</div>
+-->
+
+
+
+
+
+
+
+<!-- traffic map -->
+<!-- https://developers.google.com/maps/documentation/javascript/examples/layer-traffic#all -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYA3xs8qzirlMrtOYf5v7hEEq32dN79G4&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+        height: 500px;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      @media only screen and ( min-width: 980px ) {
+		.gm-style-pbc {
+		opacity: 0 !important;
+		}
+	  }
+    </style>
+    <script>
+      //"use strict";
+
+      function initMap() {
+        const myLatLng = { lat: 33.742, lng: -84.3682 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14,
+          center: {
+            lat: 33.74,
+            lng: -84.3682
+          },
+          options: {
+		    gestureHandling: 'cooperative'
+		  }
+        });
+        const trafficLayer = new google.maps.TrafficLayer();
+        trafficLayer.setMap(map);
+
+        new google.maps.Marker({
+          position: myLatLng,
+          map,
+          title: "Hello World!",
+        });
+
+      }
+    </script>
+    <div id="map"></div>
+<!-- /traffic map -->
+
+
+<div class="content contentpadding">
+
+  <h1>Boulevard Crossing Concept</h1>
+  
+  Phase 1: Glenwood Ave could be connected to the Boulevard intersection north of the firestation. 
+  Street lights could be updated to allow direct bike path crossing to be connected.<br><br>
+
+  <img src="img/intersection.jpg" style="width:100%; max-width:1200px;">
+
+  <div style="clear:both"></div>
+
+  <br>
+
+  <div style="max-width:650px;">
+    Phase 2: GDOT adds left turn route using half of oneway streatch of Glenwood Ave connected to improved Boulevard intersection.<br><br>
+
+    1. Allows freeway traffic to continue straight onto Glenwood Ave heading east toward Kroger.<br><br>
+
+    2. Reduces vehicle traffic along the Beltline on busy Glenwood Park side of Kroger.<br><br>
+
+    3. Eliminates traffic on Grant Park neighborhood streets by
+    adding a left turn from Glenwood Avenue to
+    Boulevard heading south.<br><br>
+
+    4. Aligns crosswalk with a new protected
+    multiuse bike path on Glenwood Ave from
+    Boulevard to MHJ High School and the Beltline.<br><br>
+  </div>
+
+
+
+
+
+
+</div>
+<div style="clear:both"></div>
+
+
+
+<div id="footer" style="display:none"></div>
+
+<div class="content contentpadding">
+  <div style="float:left">
+    <a href="https://github.com/GrantPark/grantpark">Post your input as a GitHub issue</a>
+  </div>
+  <div style="float:right">
+	<a href="https://github.com/GrantPark/grantpark"><img src="../../img/logo/github.png" style="height:32px; margin: 0px 8px 2px 1.5px"></a>
+  </div>
+</div>
+
+
+</body>
+</html>
