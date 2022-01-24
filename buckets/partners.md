@@ -1,4 +1,8 @@
-## Our Online Partners
+## Our Featured Partners
+
+<div style="float:right">
+	<a href="https://github.com/GrantPark/grantpark"><img src="img/logo/github.png" style="height:32px; margin: 8px 8px 2px 1.5px"></a>
+</div>
 
 <div style="float:left">
 
@@ -23,4 +27,4 @@
 <div style="clear:both"></div>
 <br>
 
-[Become a partner](https://gpna.org/directory/partners)  
+[View Full Business Directory](../../directory/) and [Become a Partner](../../directory/partners)

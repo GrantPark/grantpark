@@ -33,6 +33,15 @@
 	#headerSiteTitle { font-size: 16px !important; }
 	.pageColumnTitleXX { position:absolute; bottom:0px; background-color: rgba(255, 255, 255, 0.7); margin-bottom:0px;}
 	h2 { font-weight: 600; }
+
+	#gpnaFooter {
+		clear: both;
+    position: relative;
+    z-index: 1000;
+    background: #dae8eb;
+    padding-bottom: 15px;
+    border-top: 6px solid #fff;
+	}
 </style>
 </head>
 
@@ -77,8 +86,8 @@
 		      	</div>
 				-->
 
-				<h2>Grant Park on YouTube</h2>
-				<a href="https://www.youtube.com/results?search_query=Grant+Park&sp=EiG4AQHCARtDaElKbS1RUGh1a0Q5WWdSZUdKZnEzWkF4bUk%253D"><img class="lazy" data-src="https://gpna.org/files/gpna/2020/youtubesunburst-1860.png" style="opacity:0.9;width:100%; max-width:300px"></a><br>
+				
+				<div id="overviewDiv"></div>
 
 				<!--
 	          	<div style="text-align:center; border:1px solid red; max-width:300px; display:inline-block; padding:5px 15px; margin-top:8px">
@@ -305,16 +314,70 @@
 	</div>
 
 	<div style="clear:both">
+		
+
 		<br>
 		<div id="partnersDiv"></div>
 	</div>
 </div>
 
+
+
 <div id="footer" style="display:none"></div>
 
-<div class="content contentpadding" style="float:right">
-	<a href="https://github.com/GrantPark/grantpark"><img src="img/logo/github.png" style="height:32px; margin: 8px 8px 2px 1.5px"></a>
+<div id="gpnaFooter">
+		<div class="content contentpadding">
+			
+
+			<div class="pageColumns">
+
+		   
+		    <div class="pageColumn">
+		      <div class="pageColumnInside">
+		          <div id="committeesDiv"></div>
+		      </div>
+		    </div>
+
+		    <div class="pageColumn">
+		      <div class="pageColumnInside">
+		        <h2>Support GPNA</h2>
+		          <a href="/donate" target="_parent">Donations</a><br>
+		          <a href="/sunburst" target="_parent">Sunbursts</a><br>
+		          <a href="/merchandise" target="_parent">Merchandise</a><br>
+		      </div>
+		    </div>
+
+		    <div class="pageColumn">
+		      <div class="pageColumnInside">
+		        <h2>Get Involved</h2>
+		          <a href="/get-involved" target="_parent">Become a Member</a><br>
+		          <a href="/partners" target="_parent">Become a Business Partner</a><br>
+		          <a href="/event/101937" target="_parent">General Meetings (Zoom)</a><br>
+		          <a href="/committees" target="_parent">Our Committees</a><br>
+		          <a href="/contact" target="_parent">Contact Us</a><br>
+		      </div>
+		    </div>
+
+<!--
+## Calendar
+- [GPNA Calendar](../../calendar)
+- [Porch Press Calendar](https://calendar.google.com/calendar/u/0/embed?src=theporchpress@gmail.com&ctz=America/New_York)
+
+## GPNA Documents
+- [GPNA Google Drive (current documents)
+- [GPNA Archive (pre-2019)
+-->
+
+
+		    <div style="clear:both"><br></div>
+
+		</div>
+
+
+		</div>
 </div>
+
+
 
 <script>
     loadMarkdown("buckets/news.md", "newsDiv", "_parent");
@@ -324,6 +387,8 @@
     loadMarkdown("buckets/businesses.md", "businessesDiv", "_parent");
     loadMarkdown("buckets/contact.md", "contactDiv", "_parent");
     loadMarkdown("buckets/partners.md", "partnersDiv", "_parent");
+    loadMarkdown("buckets/overview.md", "overviewDiv", "_parent");
+    loadMarkdown("buckets/committees.md", "committeesDiv", "_parent");
 </script>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "38cc18a5d1c94130b06d01dffa3eff79"}'></script><!-- End Cloudflare Web Analytics -->
