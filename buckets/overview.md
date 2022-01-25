@@ -8,7 +8,7 @@
 
 ## Community Resources
 - [Business Directory](../../directory)
-- [Schools](https://grantpark.org/core/item/topic.aspx?tid=38000)
+- [Schools](../../schools)
 - [NPU-W Neighborhood Planning Unit](../../info/108371)
 - [Atlanta Urban Design Commission](https://www.atlantaga.gov/government/departments/city-planning/office-of-design/urban-design-commission/meetings-and-agendas)
 - [Porch Press](https://theporchpress.com/)
