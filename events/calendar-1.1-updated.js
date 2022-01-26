@@ -300,7 +300,7 @@ function loadEventList(initVals) {
 
     // TEMP
     //eventListJsonLink = "https://gpna.org" + eventListJsonLink;
-    eventListJsonLink = "https://gpna.org/core/event/fullcalendarfeed.aspx?admin=1&json=1&getwhat=results";
+    eventListJsonLink = "/core/event/fullcalendarfeed.aspx?admin=1&json=1&getwhat=results";
 
     console.log("eventListJsonLink after: " + eventListJsonLink)
     var gData;
