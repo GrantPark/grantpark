@@ -24,7 +24,7 @@ var val = $.extend({}, param, hash); // load param and hash into val, hash overr
 var jsonLinkBase = '/core/event/fullcalendarfeed.aspx';
 
 //TEMP
-//jsonLinkBase = "https://gpna.org" + jsonLinkBase; // Too much junk - tags and invalid dates
+// jsonLinkBase above contained too much junk - tags and invalid dates
 jsonLinkBase = "/core/event/fullcalendarfeed.aspx?json=1"
 //alert("jsonLinkBase: " + jsonLinkBase)
 
@@ -299,7 +299,7 @@ function loadEventList(initVals) {
     console.log("eventListJsonLink before: " + eventListJsonLink)
 
     // TEMP
-    //eventListJsonLink = "https://gpna.org" + eventListJsonLink;
+    //eventListJsonLink = "https://myLocalGPsite.org" + eventListJsonLink;
     eventListJsonLink = "/core/event/fullcalendarfeed.aspx?admin=1&json=1&getwhat=results";
 
     console.log("eventListJsonLink after: " + eventListJsonLink)
