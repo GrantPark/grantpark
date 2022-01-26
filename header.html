@@ -1,3 +1,77 @@
+<style>
+	.upperIconsX { display: none; }
+	.markdownEye { display: none; }
+	#logoholderX { background-image: none !important; }
+	#headerSiteTitle { font-size: 16px !important; }
+	.pageColumnTitleXX { position:absolute; bottom:0px; background-color: rgba(255, 255, 255, 0.7); margin-bottom:0px;}
+	h2 { font-weight: 600; }
+
+	#gpnaFooter {
+		clear: both;
+    position: relative;
+    z-index: 1000;
+    background: #dae8eb;
+    padding-bottom: 15px;
+    border-top: 6px solid #fff;
+	}
+	body, h2 {
+		font-family: 'PT Sans', sans-serif;
+	}
+	#topMenuHolder {
+		position: fixed;
+		padding-top: 5px;
+		padding-left: 20px;
+		padding-right: 15px;
+		padding-bottom: 2px;
+		z-index: 9999;
+		background-color: rgba(255,255,255,0.9);
+		border-bottom-right-radius: 20px;
+	}
+	#topMenuHolder .nav {
+		margin-bottom: 0px;
+	}
+</style>
+
+<style type="text/css">
+	/* Open nav when rolling over  - IMPORTANT copy these in MasterPage */
+    ul.nav li.dropdown:hover ul.dropdown-menu {
+	    display: block;    
+	}
+	.nav-pills .dropdown-menu {
+	    margin-top: 0px;
+	}
+	.nav-pills {
+	 	margin-right:3px;
+	    margin-bottom: 0px;
+	}
+	.footerTitle {
+	    color:#eee;
+	    font-weight: bold;
+	    font-size: 14pt;
+	  }
+	  .footerTitle:hover {
+	    color:#eee;
+	  }
+	.nav1 {
+		color:#fff !important;
+	}
+	.nav1:hover {
+		color:#333 !important;
+	}
+
+	.nav>li>a {
+	    color: #333 !important;
+	    font-size: 13.5px !important;
+
+	    padding: 8px;
+	    margin-top: 2px;
+	    margin-bottom: 2px;
+	    -webkit-border-radius: 5px;
+	    -moz-border-radius: 5px;
+	    border-radius: 5px;
+	}
+</style>
+
 <div id="menuHolder" style="background:#333; display:none">
 
 	<!--
@@ -94,18 +168,217 @@
 					<div style="padding-top:8px; float:right; display:none" class="mock-up">
 						<div class="arrowdown"></div>
 					</div>
+
+					<!--
 					<div class="headerDropdown mock-up">
 						<span class='arrownext' style='margin:10px 10px 0 10px'></span>
-						
-
 					</div>
+					-->
+
 					<a href="/" class="logolink">
 					<span id="headerLocTitle"></span>
 					</a>
 
-					<a href="/grantpark"><img src="/go/grantpark/images/logos/gpna-top.png" alt="" style="margin:0 0 6px 0; width:100%; max-width:480px"></a>
+					<a href="/grantpark"><img src="/go/grantpark/images/logos/gpna-top.png" alt="" style="margin:8px 0 6px 0; width:100%; max-width:480px"></a><br>
 
-				</div>
+				
+
+
+
+				<div id="topMenuHolderX" class="hideMobile">
+<!-- gpna menu -->
+<!-- Changes originate in grantpark/index.html and are copied to go/GrantPark/MasterPage.master -->
+
+	<ul class='nav nav-pills'>
+
+	<!--
+	<b class='caret'></b>
+
+
+	<li class='dropdown'>
+	<a href='/#news' class='nav1 dropdown-toggle'>News</a>
+	</li>
+	-->
+
+	<li class='dropdown'>
+	<a href='/about-gpna' class='nav1 dropdown-toggle'>Who We Are</a>
+	<ul class='dropdown-menu' id='menu1'>
+	<li><a href='/about-gpna'>Mission Statement</a></li>
+	<li><a href='/net/content/contacts.aspx?s=2173'>Leadership</a></li>
+	<li><a href='/bylaws'>Bylaws</a></li>
+	<li><a href='/history/neighborhood'>Grant Park History</a></li>
+	<li><a href='/info/112527'>Grant Requests</a></li>
+	<li><a href='/questions'>Questions & Answers</a></li>
+	<li><a href='/meeting-agendas'>Meeting Agendas</a></li>
+	<li><a href='/meeting-minutes'>Meeting Minutes</a></li>
+	
+	</ul>
+	</li>
+
+	<li class='dropdown'>
+	<a href='/calendar' class='nav1 dropdown-toggle'>Calendar</a>
+	<ul class='dropdown-menu' id='menu1'>
+	<!--
+	<li><a href="/calendar/?siteid=0">Calendar - Local and Surrounding</a></li>
+	-->
+	<li><a href="/calendar">Calendar - Grant Park</a></li>
+	<li><a href="https://calendar.google.com/calendar/embed?src=theporchpress%40gmail.com&ctz=America%2FNew_York" target="_blank">Calendar - Porch Press</a></li>
+	<!--
+	<li><a href='/core/event/eventlist.aspx'>Show on Map</a></li>
+	-->
+	<li><a href='/net/calendar/addevent.aspx'>Add New Event</a></li>
+	</ul>
+	</li>
+
+
+	<li class='dropdown'>
+	<!-- javascript:toggleDirectory();void 0; -->
+	<a href='/directory' class='nav1 dropdown-toggle'>Businesses</a>
+	<ul class='dropdown-menu' id='menu1'>
+	
+	<li><a href='javascript:toggleDirectory();void 0;'>Directory Categories</a></li>
+	<li><a href='/net/location/proximity.aspx?tid=16610'>Restaurants</a></li>
+	<li><a href='/net/location/proximity.aspx?tid=31270'>Real Estate</a></li>
+	<li><a href='/net/location/proximity.aspx?tid=30020'>Main Directory</a></li>
+
+	<li><a href='/directory/partners'>Add Your Organization</a></li>
+	<li><a href='/directory/partners'>Renew Your Listing</a></li>
+	</ul>
+	</li>
+
+	<li class='dropdown'>
+	<!-- Removed data-toggle='dropdown' to fix link containing dot and toggleDirectory. -->
+	<a href='/committees' class='nav1 dropdown-toggle'>Committees</a>
+	<ul class='dropdown-menu' id='menu1'>
+	<li><a href='/net/content/contacts.aspx?s=2173'>GPNA Committee Chairs</a></li>
+	<li><a href='/net/content/forums.aspx'>Committee News</a></li>
+	<li><a href='/economic-development'>Economic Development</a></li>
+	<li><a href='/fundraising'>Fundraising</a></li>
+	<li><a href='/historic-committee'>Homes and History</a></li>
+	<li><a href='/land-use-and-zoning'>Land Use and Zoning</a></li>
+	<!--
+	<li><a href='/parks-and-recreation'>Parks and Recreation</a></li>
+	-->
+	<li><a href='/philanthropic'>Philanthropic</a></li>
+	<li><a href='/public-safety'>Public Safety</a></li>
+	<li><a href='/technology'>Technology</a></li>
+	<li><a href='/transportation'>Transportation</a></li>
+	</ul>
+	</li>
+
+	<!--
+	<li class='8'><a href='/core/item/topic.aspx?tid=100000'>Online Store (admin)</a></li>
+	<li class='5'><a href='/core/item/topic.aspx?tid=88025'>Fund Drives (level 5+)</a></li>
+	<li class='7'><a href='/e/summary.aspx'>Online Orders (level 7+)</a></li>
+	-->
+
+	<li class='dropdown'>
+	<!-- Removed data-toggle='dropdown' to fix link containing dot and toggleDirectory. -->
+	<a href='/support-gpna' class='nav1 dropdown-toggle'>Support GPNA</a>
+	<ul class='dropdown-menu' id='menu1'>
+	<li><a href='/donate'>Donations</a></li>
+	<li><a href='/info/29988'>Sunbursts</a></li>
+	<li><a href='/merchandise'>Merchandise</a></li>
+	<!--
+	<li><a href='<%=siteFacebook%>' target="_blank"><img src="/core/elements/icons/social/facebook-icon.png" style="width:20px;height:20px" alt="Find us on Facebook"> Facebook</a></li>
+			<li><a href='https://twitter.com/#!/GrantParkGPNA' target="_blank"><img src="/core/elements/icons/social/twitter-icon.png" style="width:20px;height:20px" alt="Follow us on Twitter"> Twitter</a></li>
+	-->
+	</ul>
+	</li>
+
+	<!--
+	<li class='dropdown'>
+	<a href='/history/neighborhood' class='nav1 dropdown-toggle'>History <b class='caret'></b></a>
+	<ul class='dropdown-menu' id='menu1'>
+	<li><a href='/history'>Overview</a></li>
+	<li><a href='/search/?tid=16111' style='display:none' class='user-5'>Historic Homes</a></li>
+	<li><a href='/historic-landmarks'>Historic Landmarks</a></li>
+	<li><a href='http://preserveatlanta.com'>Atlanta Preservation Center</a></li>
+	</ul>
+	</li>
+	-->
+
+	<li class='dropdown'>
+	<a href='/resources' class='nav1 dropdown-toggle'>Community Resources</a>
+	<ul class='dropdown-menu' id='menu1'>
+
+	<li><a href='javascript:toggleDirectory();void 0;'>Business Directory</a></li>
+	<li><a href='/grantpark-schools'>Schools</a></li>
+	<li><a href='/info/108371'>NPU-W Neighborhood Planning Unit</a></li>
+	<li><a href='https://www.atlantaga.gov/government/departments/city-planning/office-of-design/urban-design-commission/meetings-and-agendas'>Atlanta Urban Design Commission</a></li>
+	<li><a href='https://theporchpress.com/'>Porch Press</a></li>
+	<li><a href='https://www.grantparkparents.org/'>Grant Park Parents Network</a></li>
+	<li><a href='https://grantparksecuritypatrol.wildapricot.org'>Grant Park Security Patrol</a></li>
+	<li><a href='/recycling'>Recycling at CHARM</a></li>
+	<li><a href='/projects'>See-Click-Fix Projects</a></li>
+	<li><a href='https://atlantapreservationcenter.com'>Atlanta Preservation Center</a></li>
+	<li><a href='https://www.gpconservancy.org'>Grant Park Conservancy</a></li>
+	<li><a href='http://zooatlanta.org'>Zoo Atlanta</a></li>
+	<li><a href='http://oaklandcemetery.com'>Oakland Cemetery</a></li>
+	<li><a href='https://www.facebook.com/grantparkpool/'>Grant Park Pool - Facebook</a></li>
+	<!-- /rec-center -->
+	<li><a href='https://www.facebook.com/grantparkrecreationcenter/'>Grant Park Rec Center - Facebook</a></li>
+	<li><a href='/resources'>Local Neighborhoods</a></li>
+	
+	</ul>
+	</li>
+
+	<!--
+	<li class='dropdown'>
+	<a href='http://grantparksecuritypatrol.org' class='nav1 dropdown-toggle'>Security Patrol <b class='caret'></b></a>
+	<ul class='dropdown-menu' id='menu1'>
+	<li><a href='http://grantparksecuritypatrol.org' target="_blank">GPSP Website</a></li>
+	</ul>
+	</li>
+	-->
+
+	<!--
+	<li><a href='/about-gpsp'>About the Grant Park Security Patrol (GPSP)</a></li>
+	<li><a href='/contact-gpsp'>Contact GPSP</a></li>
+	<li><a href='/renew/8795'>Pay Membership Online</a></li>
+	<li><a href='/gpsp-yard-signs'>Yard Signs - $10</a></li>
+	<li style="display:none" class="user-4 group-4"><a href='/members/paid/8795'>Member Reports</a></li>
+
+	<b class='caret'></b>
+	-->
+
+	<li class='dropdown'>
+	<a href='/get-involved' class='nav1 dropdown-toggle'>Get Involved</a>
+	<ul class='dropdown-menu' id='menu1'>
+
+	<li><a href="/get-involved" target="_parent">Become a Member</a></li>
+	<li><a href="/directory/partners" target="_parent">Become a Business Partner</a></li>
+	<li><a href="/event/101937" target="_parent">General Meetings (Zoom)</a></li>
+	<li><a href="/committees" target="_parent">Our Committees</a></li>
+	<li><a href="/contact" target="_parent">Contact Us</a></li>
+	<li><a href='/reserve-facilities'>Reserve Facilities</a></li>
+	<li><a href='/net/content/contacts.aspx?s=2173'>Write a Board Member</a></li>
+	
+
+	
+	<!--
+	<li><a href='/e/input.aspx?ot=d&ez=1&s=95903.0.0.20'>Make a Donation</a></li>
+	<li class='dropdown'>
+	<a href='/e/input.aspx?ot=d&ez=1&s=95903.0.0.20' class='nav1 dropdown-toggle'>Donations</a>
+	</li>
+	-->
+
+	</ul>
+	</li>
+
+	
+
+	</ul>
+
+<!-- gpna menu end -->
+</div>
+
+
+
+</div>
+
+
+
 
 			</div>
 		</div>
