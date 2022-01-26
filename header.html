@@ -1,37 +1,5 @@
-<style>
-	.upperIconsX { display: none; }
-	.markdownEye { display: none; }
-	#logoholderX { background-image: none !important; }
-	#headerSiteTitle { font-size: 16px !important; }
-	.pageColumnTitleXX { position:absolute; bottom:0px; background-color: rgba(255, 255, 255, 0.7); margin-bottom:0px;}
-	h2 { font-weight: 600; }
-
-	#gpnaFooter {
-		clear: both;
-    position: relative;
-    z-index: 1000;
-    background: #dae8eb;
-    padding-bottom: 15px;
-    border-top: 6px solid #fff;
-	}
-	body, h2 {
-		font-family: 'PT Sans', sans-serif;
-	}
-	#topMenuHolder {
-		position: fixed;
-		padding-top: 5px;
-		padding-left: 20px;
-		padding-right: 15px;
-		padding-bottom: 2px;
-		z-index: 9999;
-		background-color: rgba(255,255,255,0.9);
-		border-bottom-right-radius: 20px;
-	}
-	#topMenuHolder .nav {
-		margin-bottom: 0px;
-	}
-</style>
-
+<!-- for menu, but messes with hamburger position -->
+<link type="text/css" href="/grantpark/css/bootstrap.min.css" rel="stylesheet" />
 <style type="text/css">
 	/* Open nav when rolling over  - IMPORTANT copy these in MasterPage */
     ul.nav li.dropdown:hover ul.dropdown-menu {
@@ -69,6 +37,40 @@
 	    -webkit-border-radius: 5px;
 	    -moz-border-radius: 5px;
 	    border-radius: 5px;
+	}
+</style>
+
+<style>
+	.upperIconsX { display: none; }
+	.markdownEye { display: none; }
+	#logoholderX { background-image: none !important; }
+	#headerSiteTitle { font-size: 16px !important; }
+	.pageColumnTitleXX { position:absolute; bottom:0px; background-color: rgba(255, 255, 255, 0.7); margin-bottom:0px;}
+	h2 { font-weight: 600; }
+
+	#gpnaFooter {
+		clear: both;
+    position: relative;
+    z-index: 1000;
+    background: #dae8eb;
+    padding-bottom: 15px;
+    border-top: 6px solid #fff;
+	}
+	body, h2 {
+		font-family: 'PT Sans', sans-serif;
+	}
+	#topMenuHolder {
+		position: fixed;
+		padding-top: 5px;
+		padding-left: 20px;
+		padding-right: 15px;
+		padding-bottom: 2px;
+		z-index: 9999;
+		background-color: rgba(255,255,255,0.9);
+		border-bottom-right-radius: 20px;
+	}
+	#topMenuHolder .nav {
+		margin-bottom: 0px;
 	}
 </style>
 
@@ -189,10 +191,10 @@
 
 
 
-				<div id="topMenuHolderX" class="hideMobile">
+				<div class="hideMobile">
 <!-- gpna menu -->
 <!-- Changes originate in grantpark/index.html and are copied to go/GrantPark/MasterPage.master -->
-
+	<div style="display:none" class="bootstrap-loaded">
 	<ul class='nav nav-pills'>
 
 	<!--
@@ -370,10 +372,8 @@
 	</ul>
 	</li>
 
-	
-
 	</ul>
-
+	</div>
 <!-- gpna menu end -->
 </div>
 
