@@ -1,6 +1,6 @@
 ## Grant Park News
 
-- [Our Latest News](https://gpna.org/news/)  
+- [Our Latest News](/news/)  
 - [Twitter Posts](https://twitter.com/grantparkgpna?lang=en)
 - [Grant Park on YouTube](https://www.youtube.com/results?search_query=Grant+Park&sp=EiG4AQHCARtDaElKbS1RUGh1a0Q5WWdSZUdKZnEzWkF4bUk%253D)
 
